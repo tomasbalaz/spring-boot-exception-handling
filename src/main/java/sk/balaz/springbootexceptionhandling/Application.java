@@ -8,10 +8,10 @@ import sk.balaz.springbootexceptionhandling.customer.Customer;
 import sk.balaz.springbootexceptionhandling.customer.CustomerService;
 
 @SpringBootApplication
-public class SpringBootExceptionhandlingApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootExceptionhandlingApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 	@Bean
@@ -24,5 +24,9 @@ public class SpringBootExceptionhandlingApplication {
 					new Customer(null, "test2", "tes2@gmail.com"));
 		};
 	}
+
+	// Main configuration for problem-spring-web is in class
+	// org.zalando.problem.spring.web.autoconfigure.ProblemAutoConfiguration
+	// -> ExceptionHandling -> ProblemHandling
 
 }
